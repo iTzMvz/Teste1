@@ -31,15 +31,35 @@ export default {
 </script>
 
 <template>
- <button @click="incrementarContador">Incrementar</button>
-  <button @click="decrementarContador">Decrementar</button>
-  <button @click="resetarContador">Resetar</button>
+ <button @click="incrementarContador" class="plus">Incrementar</button>
+  <button @click="decrementarContador" class="less">Decrementar</button>
+  <button @click="resetarContador" class="reset">Resetar</button>
   <p>Valor do contador é: {{ contador }}</p>
 </template>
 
 <style scoped>
 button {
+  color: white;
+  background-color: black;
   font-weight: bold;
   border-radius: 8px;
+  padding: 4%;
+  margin: 3%;
 }
+.plus:hover{
+background-color: skyblue;
+transition: 1.2s;
+color:black;
+}
+.less:hover{
+  background-color: lightcoral;
+  transition: 1.2s;
+  color:black;
+}
+.reset:hover{
+  background-color: lightyellow;
+  transition: 1.2s;
+  color:black;
+}
+
 </style>
