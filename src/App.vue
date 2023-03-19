@@ -25,8 +25,7 @@ button:active{
   background-color: white;
   color: black;
   transform: translateY(4px);
-  transition: 0.2;
-  box-shadow: 3px 2px 7px black;
+  box-shadow: 0px 0px 9px whitesmoke;
 }
 #plus:hover{
 background-color: skyblue;
