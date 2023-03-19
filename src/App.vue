@@ -19,7 +19,7 @@ button {
   border-radius: 8px;
   padding: 6%;
   margin: 4%;
-  box-shadow: 0px 0px 9px whitesmoke;
+  box-shadow: 0px 0px 8px whitesmoke;
 }
 button:active{
   background-color: white;
