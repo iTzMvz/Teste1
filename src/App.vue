@@ -1,42 +1,13 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue';
+const contador = ref(0)
 </script>
-<script>
-export default {
-  data() {
-    return {
-      contador: 0
-    }
-  },
-  methods: {
-    incrementarContador() {
-      this.contador++
-    },
-    decrementarContador() {
-      if (this.contador > 0) {
-      this.contador--
-    }
-    },  
-    resetarContador() {
-      this.contador = 0
-    }
-    
-  },
-  mounted() {
-    console.log(`O valor inicial do contador é ${this.contador}.`)
-  }
-
-}
-</script>
-
 <template>
- <button @click="incrementarContador" class="plus">Incrementar</button>
-  <button @click="decrementarContador" class="less">Decrementar</button>
-  <button @click="resetarContador" class="reset">Resetar</button>
-  <p>Valor do contador é: {{ contador }}</p>
+<button @click="contador++" class="plus">Incrementar</button>
+<button @click="contador--" class="less">Decrementar</button>
+<button @click="contador = 0" class="reset">Resetar</button>
+<p>Valor do contador é: {{ contador }}</p>
 </template>
-
 <style scoped>
 button {
   color: white;
@@ -45,6 +16,16 @@ button {
   border-radius: 8px;
   padding: 4%;
   margin: 3%;
+  box-shadow: 3px 4px 7px black;
+  cursor: pointer;
+  outline: none;
+}
+button:active{
+  background-color: white;
+  
+  color: black;
+  transform: translateY(9px);
+  box-shadow: 3px 2px 7px black;
 }
 .plus:hover{
 background-color: skyblue;
@@ -61,5 +42,4 @@ color:black;
   transition: 1.2s;
   color:black;
 }
-
 </style>
